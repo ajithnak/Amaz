@@ -1,21 +1,9 @@
 export const initialState={
-basket: [{
-            id:"1",
-            title:"OnePlus Nord 2 5G (Gray Sierra, 8GB RAM, 128GB Storage)",
-            price:29999,
-            rating:4,
-            image:"https://m.media-amazon.com/images/I/71KVeQql77S._SX679_.jpg"
-},
-{
-            id:"1",
-            title:"OnePlus Nord 2 5G (Gray Sierra, 8GB RAM, 128GB Storage)",
-            price:29999,
-            rating:4,
-            image:"https://m.media-amazon.com/images/I/71KVeQql77S._SX679_.jpg"
-},
-],
+basket: [],
 user: null,
 };
+export const getBasketTotal= (basket) => 
+basket?.reduce((amount, item) => item.price + amount, 0 );
 
 const reducer = (state, action) =>{
     console.log(action);

@@ -20,9 +20,10 @@ function Checkout() {
         <div>
             <h2 className="checkout__title"> Your Shopping Basket</h2>
             {basket?.map((item) => {
+                console.log(item);
                 return(
             <CheckoutProduct
-            item= {item.id}
+            id= {item.id}
             title={item.title}
             image={item.image}
             price={item.price}
@@ -35,7 +36,6 @@ function Checkout() {
     </div>
     {basket.length > 0 &&(
         <div className="checkout__right">
-            <h1>Subtotal</h1>
             <Subtotal/>
             </div>
     )}
