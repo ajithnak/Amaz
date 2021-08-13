@@ -34,19 +34,20 @@ function App() {
     <Router>
     <div className="app">
       <Switch>
-        <Route path="/checkout">
+        <Route path="/checkout" exact>
           <Header/>
           <Checkout/>
         </Route>
-        <Route path="/login">
+        <Route path="/login"exact>
           <Login />
         </Route>
-        <Route path="/">
+        <Route path="/"exact>
           <Header/>
           <Home/>
         </Route>
       </Switch>
     </div>
+    <div>404 Error not found</div>
     </Router>
   );
 }
